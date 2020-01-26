@@ -5,13 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ui.main.TourFragment"
-    tools:showIn="@layout/tour_layout">
+    tools:context=".ui.main.TourFragment">
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="102dp"
+        android:layout_toStartOf="@+id/play"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="102dp"
+        android:layout_toStartOf="@+id/next"
+        android:text="Play" />
 
     <TextView
         android:id="@+id/text_view_id"
-        android:layout_height="wrap_content"
+        android:layout_width="86dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="174dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="687dp"
+        android:text="TOUR"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/song_name"
         android:layout_width="wrap_content"
-        android:text="TOUR" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="360dp"
+        android:text="Tous les mêmes"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="288dp"
+        android:text="Stromae"
+        android:textSize="32dp" />
+
+    <ImageView
+        android:id="@+id/image_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="430dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="100dp"
+        android:text="Next" />
 
 </RelativeLayout>

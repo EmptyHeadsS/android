@@ -1,9 +1,11 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.myapplication.ui.main.SectionsPagerAdapter
+import com.example.myapplication.ui.main.TourFragment
 import com.google.android.material.tabs.TabLayout
 
 

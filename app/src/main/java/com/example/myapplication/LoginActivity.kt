@@ -34,8 +34,15 @@ class LoginActivity : AppCompatActivity() {
 
             request.enqueue(object : Callback<String> {
                 override fun onResponse(call: Call<String>, response: Response<String>) {
+//                    val data = response.body()
+                    Toast.makeText(this@LoginActivity, "code:" + response.code(), Toast.LENGTH_SHORT).show()
+//                    if (data != null && data.contentEquals("User successfully logged in")) {
+                    val bundle = Bundle()
+                    bundle.putString("username", inputUsername.text.toString())
                     val intent = Intent(this@LoginActivity, AppActivity::class.java)
+                    intent.putExtras(bundle)
                     startActivity(intent)
+//                    }
                 }
 
                 override fun onFailure(call: Call<String>, t: Throwable) {
