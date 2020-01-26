@@ -1,10 +1,14 @@
 package com.example.myapplication.ui.main
 
+import android.app.PendingIntent.getActivity
 import android.content.Context
+import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.myapplication.R
+import kotlinx.android.synthetic.main.tour_layout.view.*
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -21,7 +25,11 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return LoginFragment.newInstance(position + 1)
+        Log.i("SectionsPagerAdapter", "Position: " +position)
+        when (position == 0) {
+            true -> return TourFragment.newInstance(position + 1)
+            false ->  return SyncFragment.newInstance(position + 1)
+        }
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
