@@ -81,8 +81,13 @@ class TourFragment : Fragment() {
         val positionBar = frag.findViewById<SeekBar>(R.id.positionBar)
         val volumeBar = frag.findViewById<SeekBar>(R.id.volumeBar)
         val playBouton = frag.findViewById<Button>(R.id.playBtn)
+        val cover = frag.findViewById(R.id.cover) as ImageView
+        val artist = frag.findViewById(R.id.artist) as TextView
+        val songName= frag.findViewById(R.id.songName) as TextView
+
         playlist = LinkedList()
-        if (username.equals("Alexandre")) {
+
+        if (username.contentEquals("Alexandre")) {
             //hip hop
             playlist.add(Pair(R.raw.hm1, SongMeta("10%", "KAYTRANADA", R.drawable.kaytranada)))
             playlist.add(Pair(R.raw.hm2, SongMeta("L'artiste", "Chocolat", R.drawable.chocolat)))
@@ -93,6 +98,7 @@ class TourFragment : Fragment() {
             playlist.add(Pair(R.raw.im2, SongMeta("Bricolage", "Geneviève Racette", R.drawable.racette)))
             playlist.add(Pair(R.raw.im3, SongMeta("Fil de soi", "Marie-Pierre Arthur", R.drawable.mariepierrearthur)))
         }
+        val track = playlist.pop()
 
 
         playBouton.setOnClickListener {
@@ -166,6 +172,9 @@ class TourFragment : Fragment() {
                     mp.start()
                 }
 
+                cover.setBackgroundResource(track.second.imagePath)
+                artist.setText(track.second.artist)
+                songName.setText(track.second.songTitle)
 
                 // Thread
                 Thread(Runnable {
@@ -181,9 +190,6 @@ class TourFragment : Fragment() {
                     }
                 }).start()
             }
-
-
-//        displaySong(playlist[0])
 
         return frag
     }

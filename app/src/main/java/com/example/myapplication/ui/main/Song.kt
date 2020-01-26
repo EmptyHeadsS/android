@@ -1,8 +1,5 @@
 package com.example.myapplication.ui.main
 
-import androidx.annotation.DrawableRes
-
-
 class SongId {
     private lateinit var name: String
     private lateinit var id: String

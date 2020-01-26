@@ -20,6 +20,7 @@
             android:minHeight="?actionBarSize"
             android:padding="@dimen/appbar_padding"
             android:background="#FFFFFF"
+            android:textColor="#020202"
             android:text="Discover the city musically!"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
@@ -27,7 +28,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            app:tabTextColor="@color/colorPrimaryDark"
             android:background="#FFFFFF" />
     </com.google.android.material.appbar.AppBarLayout>
 
