@@ -4,7 +4,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222247"
+    android:background="#6157b7"
     tools:context=".LoginActivity">
 
     <Button
@@ -17,6 +17,7 @@
         android:layout_marginStart="162dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="209dp"
+        android:background="#FFFFFF"
         android:text="Login" />
 
     <EditText
@@ -31,6 +32,8 @@
         android:layout_marginBottom="234dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:
         android:text="Alexandre" />
 
     <EditText
@@ -44,6 +47,7 @@
         android:layout_marginEnd="105dp"
         android:layout_marginBottom="144dp"
         android:ems="10"
+        android:textColor="#FFFFFF"
         android:inputType="textPassword" />
 
     <TextView
@@ -54,6 +58,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="251dp"
         android:layout_marginBottom="2dp"
+        android:textColor="#FFFFFF"
         android:text="Password:" />
 
 </RelativeLayout>
