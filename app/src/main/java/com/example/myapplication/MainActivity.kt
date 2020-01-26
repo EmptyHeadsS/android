@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import androidx.annotation.IntegerRes
 import com.example.myapplication.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -22,24 +23,12 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = findViewById(R.id.fab)
+//        Toast.makeText(this@MainActivity, "Click!", Toast.LENGTH_SHORT).show();
+        // val fab: FloatingActionButton = findViewById(R.id.fab)
 
-        val login_btn = findViewById<Button>(R.id.login_btn)
-
-        login_btn.setOnClickListener {
-            // your code to perform when the user clicks on the button
-            Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
-            //TODO: get les valeurs de username et passeword
-
-            //TODO: les send coté serveur et attendre la réponse
-
-            //TODO: changer de vue si ça marché
-
-        }
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
     }
 }
