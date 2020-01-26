@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import com.example.myapplication.ui.main.SectionsPagerAdapter
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val login_btn = findViewById<Button>(R.id.login_btn)
 
-        login_btn.setOnClickListener {
+       /* login_btn.setOnClickListener {
             // your code to perform when the user clicks on the button
             Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
             //TODO: get les valeurs de username et passeword
@@ -35,11 +36,13 @@ class MainActivity : AppCompatActivity() {
 
             //TODO: changer de vue si ça marché
 
-        }
+        }*/
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        fab.setOnClickListener {
+            SpotifyService.connect(this) {
+                val intent = Intent(this, PlayerActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
