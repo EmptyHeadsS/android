@@ -1,2 +1,2 @@
-include ':app', ':volley'
+include ':app', ':volley', ':spotify-app-remote-release-0.7.0'
 rootProject.name='My Application'
