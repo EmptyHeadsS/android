@@ -1,5 +1,7 @@
 package com.example.myapplication.ui.main
 
+import androidx.annotation.DrawableRes
+
 
 class SongId {
     private lateinit var name: String
@@ -11,18 +13,16 @@ class SongId {
     }
 }
 
-class Song {
+class SongMeta {
 
-    private lateinit var name: String
-    private lateinit var artist: String
-    private lateinit var id: String
-    private lateinit var imagePath: String
+    var songTitle: String
+    var artist: String
+    var imagePath: Int
 
-    constructor(name: String, artist: String, id: String, imagePath: String) {
-        this.name = name
-        this.id = id
+    constructor(songTitle: String, artist: String, image: Int) {
+        this.songTitle = songTitle
         this.artist = artist
-        this.imagePath = imagePath
+        this.imagePath = image
     }
 }
 
