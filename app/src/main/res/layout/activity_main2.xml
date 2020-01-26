@@ -33,7 +33,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
-        android:
         android:text="Alexandre" />
 
     <EditText
